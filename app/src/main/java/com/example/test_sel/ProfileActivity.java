@@ -115,6 +115,7 @@ public class ProfileActivity extends AppCompatActivity {
             userId = getIntent().getExtras().getString(getString(R.string.intentsExtrasVisiitUserId));
             img_edit.setVisibility(View.INVISIBLE);
             img_camera.setVisibility(View.INVISIBLE);
+            img_schedule.setVisibility(View.INVISIBLE);
         } else {
             userId = fAuth.getCurrentUser().getUid();
         }

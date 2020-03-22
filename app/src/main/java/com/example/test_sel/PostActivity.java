@@ -134,7 +134,7 @@ public class PostActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.logout) {
             FirebaseAuth.getInstance().signOut();
             startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-            finish();
+            finishAffinity();
         }
         if (item.getItemId() == R.id.search) {
             startActivity(new Intent(getApplicationContext(), SearchMentoringActivity.class));
