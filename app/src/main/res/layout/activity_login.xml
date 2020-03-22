@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rootView"
     android:layout_width="match_parent"
@@ -24,98 +23,100 @@
         android:layout_marginTop="30dp"
         android:src="@drawable/img_headline" />
 
-    <TextView
-        android:id="@+id/TXT_login"
+    <SeekBar
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/IMG_headline"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="#F0EFEF"
-        android:gravity="center"
-        android:background="@drawable/rounded_edit_txt"
-        android:text="LOGIN"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/TXT_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/IMG_headline"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_edit_txt"
+            android:backgroundTint="#F0EFEF"
+            android:gravity="center"
+            android:text="LOGIN"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
 
-    <com.rilixtech.widget.countrycodepicker.CountryCodePicker
-        android:id="@+id/ccp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/TXT_login"
+        <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TXT_login"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
 
-        />
-    <EditText
-        android:id="@+id/EDT_phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ccp"
-        android:layout_alignParentLeft="true"
-        android:hint="Mobile Number"
-        android:textSize="26dp"
-        android:textDirection="ltr"
-        android:inputType="number" />
+            />
 
-
-
-    <ProgressBar
-        android:id="@+id/pbarLog"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:visibility="invisible"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/EDT_phone"
-        >
-    </ProgressBar>
+        <EditText
+            android:id="@+id/EDT_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ccp"
+            android:layout_alignParentLeft="true"
+            android:hint="Mobile Number"
+            android:inputType="number"
+            android:textDirection="ltr"
+            android:textSize="26dp" />
 
 
-    <TextView
-        android:id="@+id/TXT_msg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/pbarLog"
-        android:layout_below="@+id/EDT_phone"
-        android:text="sending OTP"
-        android:visibility="invisible"
-        android:layout_marginTop="4dp"
-        android:textSize="16dp"
-        android:textColor="#9C27B0"
-        android:textDirection="ltr"
-        android:inputType="textVisiblePassword" />
+        <ProgressBar
+            android:id="@+id/pbarLog"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EDT_phone"
+            android:layout_alignParentLeft="true"
+            android:padding="10dp"
+            android:visibility="invisible"></ProgressBar>
 
 
-    <EditText
-        android:id="@+id/EDT_code"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/pbarLog"
-        android:layout_below="@+id/EDT_phone"
-        android:hint="verification number"
-        android:visibility="invisible"
-        android:textSize="26dp"
-        android:textDirection="ltr"
-        android:inputType="textVisiblePassword" />
+        <TextView
+            android:id="@+id/TXT_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EDT_phone"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/pbarLog"
+            android:inputType="textVisiblePassword"
+            android:text="sending OTP"
+            android:textColor="#9C27B0"
+            android:textDirection="ltr"
+            android:textSize="16dp"
+            android:visibility="invisible" />
 
 
-    <Button
-        android:id="@+id/BTN_next"
-        android:layout_width="150dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="10dp"
-       android:layout_centerHorizontal="true"
-        android:background="@drawable/rounded_edit_txt"
-        android:text="next"
-        android:layout_below="@+id/EDT_code"
-        android:backgroundTint="#F9E3FD"
-        android:textColor="#9C27B0"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        <EditText
+            android:id="@+id/EDT_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EDT_phone"
+            android:layout_toRightOf="@+id/pbarLog"
+            android:hint="verification number"
+            android:inputType="textVisiblePassword"
+            android:textDirection="ltr"
+            android:textSize="26dp"
+            android:visibility="invisible" />
 
-        />
 
+        <Button
+            android:id="@+id/BTN_next"
+            android:layout_width="150dp"
+            android:layout_height="59dp"
+            android:layout_below="@+id/EDT_code"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edit_txt"
+            android:backgroundTint="#F9E3FD"
+            android:text="next"
+            android:textColor="#9C27B0"
+            android:textSize="16sp"
+            android:textStyle="bold"
+
+            />
+    </SeekBar>
 
 </RelativeLayout>
